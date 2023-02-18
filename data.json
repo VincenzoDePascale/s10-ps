@@ -1,0 +1,47 @@
+// 20230217153409
+// https://api.openweathermap.org/data/2.5/weather?q=roma&appid=a58608a54647062d097718fd7013334b
+
+{
+  "coord": {
+    "lon": -75.4557,
+    "lat": 43.2128
+  },
+  "weather": [
+    {
+      "id": 804,
+      "main": "Clouds",
+      "description": "overcast clouds",
+      "icon": "04d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 275.44,
+    "feels_like": 270.1,
+    "temp_min": 273.08,
+    "temp_max": 278.12,
+    "pressure": 1003,
+    "humidity": 93
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 7.2,
+    "deg": 270,
+    "gust": 9.77
+  },
+  "clouds": {
+    "all": 100
+  },
+  "dt": 1676644451,
+  "sys": {
+    "type": 1,
+    "id": 5681,
+    "country": "US",
+    "sunrise": 1676635043,
+    "sunset": 1676673275
+  },
+  "timezone": -18000,
+  "id": 5134295,
+  "name": "Rome",
+  "cod": 200
+}
