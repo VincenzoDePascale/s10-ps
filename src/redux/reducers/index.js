@@ -1,8 +1,8 @@
 const initialState = {
-  location: {
-    lat: "",
-    lon: "",
-  },
+  lat: "-75.4557",
+  lon: "43.2128",
+  meteoData: {},
+  manyDays: {},
   place: "Roma",
 };
 
@@ -14,28 +14,27 @@ const mainReducer = (state = initialState, action) => {
         place: action.payload,
       };
 
-    case "ADD_LAT_LON":
+    case "ADD_LAT":
       return {
         ...state,
-        location: action.payload,
+        lat: action.payload,
+      };
+    case "ADD_LON":
+      return {
+        ...state,
+        lon: action.payload,
       };
 
-    case "ADD":
+    case "WEATHER":
       return {
         ...state,
-        location: action.payload,
+        meteoData: action.payload,
       };
 
-    case "action2":
+    case "MANY_DAYS":
       return {
         ...state,
-        city: {
-          ...state.city,
-          content: [
-            "",
-            /*filter per cancellare roba tramite index*/
-          ],
-        },
+        manyDays: action.payload,
       };
 
     default:

@@ -28,9 +28,30 @@ const NavBar = () => {
             >
               {/* <Nav.Link href="#action1">Home</Nav.Link> */}
               <NavDropdown title="YourTown" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">Rome</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">Naples</NavDropdown.Item>
-                <NavDropdown.Item href="#action5">Milan</NavDropdown.Item>
+                <NavDropdown.Item
+                  href="#action3"
+                  onClick={() => {
+                    Dispatch({ type: "PLACE", payload: "Roma" });
+                  }}
+                >
+                  Rome
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  href="#action4"
+                  onClick={() => {
+                    Dispatch({ type: "PLACE", payload: "Napoli" });
+                  }}
+                >
+                  Naples
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  href="#action5"
+                  onClick={() => {
+                    Dispatch({ type: "PLACE", payload: "Milano" });
+                  }}
+                >
+                  Milan
+                </NavDropdown.Item>
               </NavDropdown>
             </Nav>
             <Form
@@ -38,7 +59,10 @@ const NavBar = () => {
               onSubmit={(e) => {
                 e.preventDefault();
                 Dispatch({ type: "PLACE", payload: e.target[0].value });
-                console.log("tua madre", e.target[0].value);
+                console.log(
+                  "errore on submit in navbar di:",
+                  e.target[0].value
+                );
               }}
             >
               <Form.Control
